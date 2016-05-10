@@ -1,0 +1,10 @@
+sudo: required
+
+language: c
+
+service:
+   - docker
+
+before_install:
+   - make build
+   - docker ps -a
