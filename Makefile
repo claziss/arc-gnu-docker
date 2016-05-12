@@ -1,7 +1,6 @@
 NS = claziss
 REPO = arc-gnu
 NAME = arc-gnu
-VOLUMES = -v $PWD:/INSTALL
 
 .PHONY: build shell run start stop stoprm rm
 
