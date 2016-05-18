@@ -14,9 +14,9 @@ RUN buildDeps='texinfo byacc flex libncurses5-dev zlib1g-dev libexpat1-dev texli
     && rm arc_gnu.tar.gz* \
     && dir="$(mktemp -d)" \
     && cd /usr/src/arc/toolchain \
-    && ./build-all.sh --no-uclibc --no-multilib --no-sim --no-auto-checkout \
-       --no-auto-pull --cpu quarkse_em --no-external-download \
-       --target-cflags \"-mno-sdata\" --jobs "$(nproc)" \
+    && ./build-all.sh --no-uclibc --multilib --no-sim --no-auto-checkout \
+       --no-auto-pull --cpu archs --no-external-download \
+       --target-cflags --jobs "$(nproc)" \
        --build-dir "$dir" \
     && rm -rf "$dir" \
     && apt-get purge -y --auto-remove $buildDeps
