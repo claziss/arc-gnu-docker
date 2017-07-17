@@ -14,7 +14,7 @@ RUN buildDeps='texinfo byacc flex libncurses5-dev zlib1g-dev libexpat1-dev texli
     && rm arc_gnu.tar.gz* \
     && dir="$(mktemp -d)" \
     && cd /usr/src/arc/toolchain \
-    && ./build-all.sh --no-uclibc --no-multilib --no-sim --no-auto-checkout \
+    && ./build-all.sh --no-uclibc --no-multilib --no-auto-checkout \
        --no-auto-pull --cpu archs --no-external-download \
        --jobs "$(nproc)" \
        --build-dir "$dir" \
