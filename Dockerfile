@@ -1,7 +1,7 @@
 FROM buildpack-deps:jessie
 
 #Release sources
-ENV ARC_GCC 2016.03
+ENV ARC_GCC 2017.03
 
 #download sources and build
 RUN buildDeps='texinfo byacc flex libncurses5-dev zlib1g-dev libexpat1-dev texlive wget' \

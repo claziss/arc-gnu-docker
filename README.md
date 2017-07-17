@@ -1,4 +1,4 @@
-ARC GNU Docker Container
+ARC GNU Docker Container [![Build Status](https://travis-ci.org/claziss/arc-gnu-docker.svg?branch=master)](https://travis-ci.org/claziss/arc-gnu-docker)
 =====
 
 This container helps building the GNU toolchain for ARC processors using the latest releases form Synopsys git account.
