@@ -4,7 +4,7 @@ FROM buildpack-deps:jessie
 ENV ARC_GCC 2017.03
 
 #download sources and build
-RUN buildDeps='texinfo byacc flex libncurses5-dev zlib1g-dev libexpat1-dev texlive wget' \
+RUN buildDeps='texinfo byacc flex libncurses5-dev zlib1g-dev libexpat1-dev texlive wget pv' \
     && set -x \
     && apt-get update && apt-get install -y $buildDeps libgmp-dev libmpfr-dev libmpc-dev --no-install-recommends \
     && rm -r /var/lib/apt/lists/* \
