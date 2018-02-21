@@ -15,9 +15,9 @@ RUN buildDeps='texinfo byacc flex libncurses5-dev zlib1g-dev libexpat1-dev texli
     && dir="$(mktemp -d)" \
     && cd /usr/src/arc/toolchain \
     && ./build-all.sh --no-uclibc --no-multilib --no-auto-checkout \
-       --no-auto-pull --cpu archs --no-external-download \
-       --jobs "$(nproc)" \
-       --build-dir "$dir" \
+       --no-auto-pull --cpu em --no-external-download \
+       --jobs "$(nproc)" --no-pdf \
+       --build-dir "$dir" --no-optsize-newlib  --no-optsize-libstdc++ \
     && rm -rf "$dir" \
     && apt-get purge -y --auto-remove $buildDeps
 
