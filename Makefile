@@ -4,6 +4,7 @@ NAME = arc-gnu
 
 .PHONY: build shell run start stop stoprm rm
 
+# Use --network=host if firewall is in place.
 build:
 	docker build -t $(NS)/$(REPO) .
 
@@ -21,5 +22,8 @@ stop:
 
 rm:
 	docker rm $(NAME)
+
+list:
+	docker container ls -a
 
 default: build

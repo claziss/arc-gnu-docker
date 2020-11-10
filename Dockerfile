@@ -1,7 +1,7 @@
-FROM buildpack-deps:jessie
+FROM buildpack-deps:buster
 
 #Release sources
-ENV ARC_GCC 2017.03
+ENV ARC_GCC 2020.09
 
 #download sources and build
 RUN buildDeps='texinfo byacc flex libncurses5-dev zlib1g-dev libexpat1-dev texlive wget pv' \
